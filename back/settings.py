@@ -28,7 +28,7 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.environ.get( 
 "DJANGO_ALLOWED_HOSTS", 
-"localhost,127.0.0.1,https://djangobackend-e8pn.onrender.com/" 
+"localhost,127.0.0.1,djangobackend-e8pn.onrender.com" 
 ).split(",")
 
 # Application definition
@@ -154,7 +154,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [ 
-"https://react-frontend-qzej5krl4-varun-prasath.vercel.app/",  # your deployed frontend 
+"https://react-frontend-qzej5krl4-varun-prasath.vercel.app",  # your deployed frontend 
 ] 
 CORS_ALLOW_ALL_ORIGINS = False 
 CORS_ALLOW_CREDENTIALS = True 
@@ -165,6 +165,10 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with', 
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://react-frontend-qzej5krl4-varun-prasath.vercel.app",
+    "https://djangobackend-e8pn.onrender.com",
+]
 
 REST_FRAMEWORK = { 
 'DEFAULT_PERMISSION_CLASSES': [ 
