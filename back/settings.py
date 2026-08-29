@@ -152,19 +152,34 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
 
 
+# =========================
+# CORS CONFIGURATION
+# =========================
 
-CORS_ALLOWED_ORIGINS = [ 
-"https://react-frontend-qzej5krl4-varun-prasath.vercel.app",  # your deployed frontend 
-] 
-CORS_ALLOW_ALL_ORIGINS = False 
-CORS_ALLOW_CREDENTIALS = True 
-CORS_ALLOW_HEADERS = [ 
-'content-type', 
-'authorization', 
-'x-csrftoken', 
-'x-requested-with', 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+
+    # Vercel frontend
+    "https://react-frontend-qcd1y4h2r-varun-prasath.vercel.app",
+
+    # Previous Vercel deployment if still needed
+    "https://react-frontend-qzej5krl4-varun-prasath.vercel.app",
 ]
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
 CSRF_TRUSTED_ORIGINS = [
     "https://react-frontend-qzej5krl4-varun-prasath.vercel.app",
     "https://djangobackend-e8pn.onrender.com",
