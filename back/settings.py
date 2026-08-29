@@ -181,8 +181,11 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+
+    "https://react-frontend-qcd1y4h2r-varun-prasath.vercel.app",
     "https://react-frontend-qzej5krl4-varun-prasath.vercel.app",
-    "https://djangobackend-e8pn.onrender.com",
 ]
 
 REST_FRAMEWORK = { 
