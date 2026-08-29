@@ -28,7 +28,7 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = os.environ.get( 
 "DJANGO_ALLOWED_HOSTS", 
-"localhost,127.0.0.1,todo-backend-yi3f.onrender.com" 
+"localhost,127.0.0.1,https://djangobackend-e8pn.onrender.com/" 
 ).split(",")
 
 # Application definition
